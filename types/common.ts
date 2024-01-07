@@ -1,0 +1,33 @@
+export interface SenderPosition {
+  reference_timestamp: Date;
+  name: string;
+  dstcall: string;
+  relay: null | string;
+  receiver_name: string;
+  timestamp: Date;
+  location: string;
+  track: number;
+  ground_speed: number;
+  altitude: number;
+  address_type: number;
+  aircraft_type: string;
+  stealth: null | boolean;
+  address: string;
+  climb_rate: number;
+  turn_rate: null | number;
+  signal_quality: number;
+  error_count: null | number;
+  frequency_offset: number;
+  gps_quality_horizontal: number;
+  gps_quality_vertical: number;
+  software_version: null | string;
+  hardware_version: null | string;
+  real_address: null | string;
+  signal_power: number;
+  distance: number;
+  bearing: number;
+  normalized_quality: number;
+  location_mgrs: string;
+  location_mgrs_short: string;
+  agl: null | number;
+}
