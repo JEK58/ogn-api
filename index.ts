@@ -10,6 +10,7 @@ const db = knex({
   connection: process.env.DATABASE_URL,
   searchPath: ["knex", "public"],
 });
+console.log(process.env.DATABASE_URL);
 
 const INACTIVE_AFTER = 30; // 30 minutes
 
