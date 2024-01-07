@@ -10,7 +10,7 @@ services:
 
     restart: always
     ports:
-      - 4000:4444
+      - 4444:4444
     labels:
       traefik.enable: true
       traefik.http.routers.ogn-api.rule: "Host(`flarm.lurb.org`)"
