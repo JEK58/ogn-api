@@ -7,7 +7,8 @@ services:
       dockerfile: Dockerfile
     environment:
       DATABASE_URL: ${DATABASE_URL}
-
+    networks:
+      - ogn-proxy_ogn
     restart: always
     ports:
       - 4444:4000
@@ -25,5 +26,5 @@ networks:
     name: traefik
     external: true
 
-  ogn:
+  ogn-proxy_ogn:
     driver: bridge
