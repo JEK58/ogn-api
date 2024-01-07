@@ -2,7 +2,6 @@ version: "3.8"
 
 services:
   ogn-api:
-    container_name: ogn-api
     build:
       context: ./
       dockerfile: Dockerfile
@@ -11,14 +10,14 @@ services:
 
     restart: always
     ports:
-      - 4000:4000
+      - 4000:4444
     labels:
       traefik.enable: true
       traefik.http.routers.ogn-api.rule: "Host(`flarm.lurb.org`)"
       traefik.http.routers.ogn-api.entrypoints: websecure
       traefik.http.routers.ogn-api.tls.certresolver: myresolver
       traefik.http.routers.ogn-api.priority: 100
-      traefik.port: 4000
+      traefik.port: 4444
       traefik.docker.network: traefik
 
 networks:
