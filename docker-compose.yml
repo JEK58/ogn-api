@@ -9,6 +9,7 @@ services:
       DATABASE_URL: ${DATABASE_URL}
     networks:
       - ogn-proxy_ogn
+      - default
     restart: always
     ports:
       - 4444:4000
