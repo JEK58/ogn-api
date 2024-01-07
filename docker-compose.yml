@@ -24,3 +24,6 @@ networks:
   default:
     name: traefik
     external: true
+
+  ogn:
+    driver: bridge
