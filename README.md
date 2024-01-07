@@ -1,4 +1,4 @@
-# ogn-to-igc-converter
+# ogn-api
 
 To install dependencies:
 
