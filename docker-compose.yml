@@ -28,3 +28,4 @@ networks:
 
   ogn-proxy_ogn:
     driver: bridge
+    external: true
