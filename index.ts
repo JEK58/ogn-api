@@ -10,9 +10,11 @@ const db = knex({
   connection: process.env.DATABASE_URL,
   searchPath: ["knex", "public"],
 });
-console.log(process.env.DATABASE_URL);
 
 const INACTIVE_AFTER = 30; // 30 minutes
+
+if (!Bun.env.API_KEY || Bun.env.API_KEY === "")
+  throw new Error("No API Key set");
 
 app.get("api/flarm/:ids", async (c) => {
   if (Bun.env.API_KEY !== c.req.header("API-Key")) {
