@@ -64,7 +64,6 @@ app.get("flarm/:ids", async (c) => {
       )
       .orderBy("timestamp", "asc");
 
-    // @ts-expect-error
     const fixesGrouped = Object.groupBy(fixes, ({ address }) => address);
     const activeIds = Object.keys(fixesGrouped);
 
