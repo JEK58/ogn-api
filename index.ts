@@ -9,6 +9,7 @@ const db = knex({
   client: "pg",
   connection: process.env.DATABASE_URL,
   searchPath: ["knex", "public"],
+  pool: { min: 0, max: 7 },
 });
 
 const INACTIVE_AFTER = 30; // 30 minutes
