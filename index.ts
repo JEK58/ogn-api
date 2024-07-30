@@ -17,6 +17,8 @@ const INACTIVE_AFTER = 30; // 30 minutes
 if (!Bun.env.API_KEY || Bun.env.API_KEY === "")
   throw new Error("No API Key set");
 
+console.log("Server started");
+
 app.get("flarm/:ids", async (c) => {
   if (Bun.env.API_KEY !== c.req.header("API-Key")) {
     c.status(401);
