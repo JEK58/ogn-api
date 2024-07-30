@@ -10,15 +10,15 @@ services:
       - ogn-proxy_ogn
       - traefik
     restart: always
- #   ports:
-#      - 4444:4000
+    #ports:
+     # - 4444:4000
     labels:
       traefik.enable: true
       traefik.http.routers.ogn-api.rule: "Host(`flarm.xccup.net`)"
       traefik.http.routers.ogn-api.entrypoints: websecure
       traefik.http.routers.ogn-api.tls.certresolver: myresolver
       traefik.http.routers.ogn-api.priority: 100
-      traefik.port: 4444
+      traefik.port: 4000
       traefik.docker.network: traefik
 
 networks:
