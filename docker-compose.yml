@@ -8,7 +8,7 @@ services:
       API_KEY: ${API_KEY}
     networks:
       - ogn-proxy_ogn
-      - default
+      - traefik
     restart: always
  #   ports:
 #      - 4444:4000
@@ -22,10 +22,8 @@ services:
       traefik.docker.network: traefik
 
 networks:
-  default:
-    name: traefik
+  traefik:
     external: true
-
+    
   ogn-proxy_ogn:
-    driver: bridge
     external: true
