@@ -12,11 +12,11 @@ services:
       - ogn-proxy_ogn
       - default
     restart: always
-    ports:
-      - 4444:4000
+ #   ports:
+#      - 4444:4000
     labels:
       traefik.enable: true
-      traefik.http.routers.ogn-api.rule: "Host(`flarm.lurb.org`)"
+      traefik.http.routers.ogn-api.rule: "Host(`flarm.xccup.net`)"
       traefik.http.routers.ogn-api.entrypoints: websecure
       traefik.http.routers.ogn-api.tls.certresolver: myresolver
       traefik.http.routers.ogn-api.priority: 100
